@@ -10,7 +10,7 @@ PR = "r32"
 
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
-inherit packagegroup
+inherit packagegroup gitpkgv 
 
 RDEPENDS_${PN} = "\
     ca-certificates \
@@ -75,6 +75,8 @@ RDEPENDS_${PN} = "\
     wget \
     python-twisted-protocols python-numbers python-argparse \
     "
+
+MACHINE_EXTRA_RDEPENDS_remove = "enigma2-plugin-systemplugins-vfdcontrol"
 
 # The following RRECOMMENDS ensure that images on boxes with very limited
 # kernel space behave identical to those that have these options built-in
