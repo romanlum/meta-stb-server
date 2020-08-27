@@ -74,6 +74,7 @@ RDEPENDS_${PN} = "\
     vsftpd \
     wget \
     python-twisted-protocols python-numbers python-argparse \
+    openatv-bootlogo \
     "
 
 MACHINE_EXTRA_RDEPENDS_remove = "enigma2-plugin-systemplugins-vfdcontrol"
