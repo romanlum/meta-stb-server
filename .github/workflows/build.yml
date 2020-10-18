@@ -24,6 +24,8 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: run build
-        run: build.sh
+        run: |
+             chmod +x build.sh
+             build.sh
 
    
