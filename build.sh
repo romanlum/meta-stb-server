@@ -6,7 +6,7 @@ git clone git://github.com/oe-alliance/build-enviroment.git -b 4.4
 ln -s $(pwd)/recipes-stb-server $(pwd)/build-enviroment/meta-local/recipes-local/
 ln -s $(pwd)/conf/distro $(pwd)/build-enviroment/meta-local/conf/
 
-cd build-environment
+cd build-enviroment
 export DISTRO=stbserver
 export MACHINE=gbx34k
 make image
