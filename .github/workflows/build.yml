@@ -27,5 +27,12 @@ jobs:
         run: |
              chmod +x build.sh
              ./build.sh
+             
+      - name: Archive production artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: image
+          path: |
+            build-environment/builds/stbserver/gbx34k/tmp/deploy/images
 
    
