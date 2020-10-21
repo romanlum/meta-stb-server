@@ -76,7 +76,7 @@ RDEPENDS_${PN} = "\
     python-twisted-protocols python-numbers python-argparse \
     openatv-bootlogo \
     tvheadend \
-    oscam
+    oscam \
     "
 
 MACHINE_EXTRA_RDEPENDS_remove = "enigma2-plugin-systemplugins-vfdcontrol"
