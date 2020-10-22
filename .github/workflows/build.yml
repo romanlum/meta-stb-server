@@ -33,6 +33,6 @@ jobs:
         with:
           name: image
           path: |
-            build-enviroment/builds/stbserver/gbx34k/tmp/deploy/images
+            build-enviroment/builds/stbserver/release/gbx34k/tmp/deploy/images
 
    
