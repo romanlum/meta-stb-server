@@ -77,6 +77,7 @@ RDEPENDS_${PN} = "\
     openatv-bootlogo \
     tvheadend \
     oscam \
+    minisatip \
     "
 
 MACHINE_EXTRA_RDEPENDS_remove = "enigma2-plugin-systemplugins-vfdcontrol"
