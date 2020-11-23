@@ -21,19 +21,12 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-
-      - name: Cache sstate
-        id: cache-sstate
-        uses: actions/cache@v2
-        with:
-          path: build-enviroment/builds/stbserver/sstate-cache
-          key: ${{ runner.os }}-cache
-      
+   
       - name: run build
         run: |
              chmod +x build.sh
              ./build.sh
-             
+             du build-enviroment/builds/stbserver/sstate-cache
       - name: Archive production artifacts
         uses: actions/upload-artifact@v2
         with:
