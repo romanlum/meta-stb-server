@@ -35,7 +35,7 @@ jobs:
              du build-enviroment/builds/stbserver/sstate-cache
       - name: pack cache
         run: |
-             tar -cvJf build-enviroment/cache.tar.xz /build-enviroment/builds/stbserver/sstate-cache
+             tar -cvJf build-enviroment/cache.tar.xz build-enviroment/builds/stbserver/sstate-cache
       - name: Archive production artifacts
         uses: actions/upload-artifact@v2
         with:
