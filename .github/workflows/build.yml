@@ -43,6 +43,6 @@ jobs:
         with:
           name: image
           path: |
-            build-enviroment/builds/stbserver/release/gb72604/tmp/deploy/images
+            build-enviroment.tmp/builds/stbserver/release/gb72604/tmp/deploy/images
 
    
