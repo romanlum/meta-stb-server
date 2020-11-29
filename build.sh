@@ -5,17 +5,20 @@ sudo apt-get install -y autoconf  xz-utils automake bison bzip2 cvs diffstat fle
 git clone git://github.com/oe-alliance/build-enviroment.git -b 4.4 build-environment.tmp
 
 mkdir -p $(pwd)/build-enviroment/meta-stbserver/conf
-cp build-environment.tmp/* $(pwd)/build-enviroment/ -R -f
 
 cp -R $(pwd)/recipes-stb-server $(pwd)/build-enviroment/meta-stbserver/recipes-local/
 cp -R $(pwd)/conf/* $(pwd)/build-enviroment/meta-stbserver/conf/
 
 
 
-cd build-enviroment
+cd build-enviroment.tmp
 sed -i -e 's/meta-local/meta-stbserver/g' Makefile
 
 export DISTRO=stbserver
 export MACHINE=gbx34k
+
+make update
+cp build-environment.tmp/* ../build-enviroment/ -R -f
+cd ../build-environment
 make image
 
