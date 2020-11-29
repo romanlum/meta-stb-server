@@ -28,6 +28,8 @@ jobs:
         with:
           path: build-enviroment/cache.tar.xz
           key: ${{ runner.os }}-cache
+      - name: unpack cache
+        run: tar -xvJf build-enviroment/cache.tar.xz
       - name: run build
         run: |
              chmod +x build.sh
