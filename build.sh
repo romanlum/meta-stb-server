@@ -8,15 +8,13 @@ mkdir -p $(pwd)/build-enviroment.tmp/meta-stbserver/conf
 cp -R $(pwd)/recipes-stb-server $(pwd)/build-enviroment.tmp/meta-stbserver/recipes-local/
 cp -R $(pwd)/conf/* $(pwd)/build-enviroment.tmp/meta-stbserver/conf/
 
-cd build-enviroment.tmp
-sed -i -e 's/meta-local/meta-stbserver/g' Makefile
-
 export DISTRO=stbserver
 export MACHINE=gbx34k
 
 mkdir -p build-enviroment.tmp/builds/stbserver
-
 ln -s build-enviroment/builds/stbserver/sstate-cache build-enviroment.tmp/builds/stbserver/sstate-cache
 
 cd build-enviroment.tmp
+sed -i -e 's/meta-local/meta-stbserver/g' Makefile
+
 make image
