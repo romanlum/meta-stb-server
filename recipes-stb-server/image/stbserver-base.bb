@@ -78,6 +78,7 @@ RDEPENDS_${PN} = "\
     tvheadend \
     oscam \
     minisatip \
+    dvb-apps \
     "
 
 MACHINE_EXTRA_RDEPENDS_remove = "enigma2-plugin-systemplugins-vfdcontrol"
